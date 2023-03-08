@@ -22,4 +22,4 @@ int num = int.Parse(Console.ReadLine());
 
 int countNum = GetCountNum(num);
 
-Console.WriteLine(countNum);
+Console.WriteLine($"Количество циф в числе = {countNum}");
