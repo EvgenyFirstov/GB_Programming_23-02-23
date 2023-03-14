@@ -80,26 +80,36 @@ int position = getPositionArray(num, nums);
 Console.WriteLine(position+1);
 */
 
-void arr(int[] array)
+int[] array = { 1, 2, 3, 4, 5, 6, 7, 8 };
+
+void printarray(int[] array)
 {
-    int length = array.Length;
-    int index = 0;
-    while (index < length)
+    for (int i = 0; i < array.Length; i++)
     {
-        array[index] = new Random().Next(0,2);
-        index++;
+        Console.Write(array[i]);
     }
 }
-void printarr(int[] array)
+
+int serch(int[] arr, int x)
 {
-    int length = array.Length;
-    int index = 0;
-    while (index < length)
+    int result = 0;
+
+    for (int i = 0; i < arr.Length; i++)
     {
-        System.Console.Write(array[index]);
-        index++;
+
+        if (x == arr[i])
+        {
+            result = 1;
+        }
+
     }
+
+    return result;
 }
-int[] array = new int[8];
-arr(array);
-printarr(array);
+
+Console.Write("vvedite chislo ot 1 do 9: ");
+int number = int.Parse(Console.ReadLine());
+
+printarray(array);
+int y = serch(array, number);
+Console.WriteLine(" " + y);

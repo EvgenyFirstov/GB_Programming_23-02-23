@@ -6,7 +6,7 @@
 
 double GetStep(double a, double b)
 {
-    
+
     double result = Math.Pow(a, b);
     return result;
 }
